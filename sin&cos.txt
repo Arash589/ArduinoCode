@@ -1,0 +1,12 @@
+void setup() {این کد میاد بر نامه میاد شکل سینوسی و سریال پلاتر نمایش می دهد به طور همزمان
+  Serial.begin(9600);
+}
+
+void loop() {
+ for(float i=0;i<360.00;i=i+2){
+  Serial.print(sin(i*PI/160.00));
+  Serial.print(" ");
+  Serial.println(cos(i*PI/180.00));
+ }
+
+}

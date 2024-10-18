@@ -1,0 +1,17 @@
+int ButtonPin = 2;این میاد برنامه به ما میده با فشردن کلید پایه روشن کن یا خاموش شود
+int ledPin = 13;
+int ButtonState = 0;
+void setup() {
+  pinMode(ButtonPin, INPUT);
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  ButtonState = digitalRead(ButtonPin);
+  if (ButtonState == HIGH)
+  {
+    digitalWrite(ledPin, HIGH);
+  } else {
+    digitalWrite(ledPin, LOW);
+  }
+}
