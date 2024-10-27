@@ -1,0 +1,47 @@
+int ledpin=6;
+int val=0;
+void setup() {
+pinMode(ledpin, OUTPUT);
+pinMode(A0,INPUT);
+}
+
+void loop() {
+ val=analogRead(A0);
+ int newval= map(val,0,1023,0,255);
+ analogWrite(ledpin, newval);
+
+}
+===================================================================================
+int ledpin=6;
+float val=0;
+void setup() {
+pinMode(ledpin, OUTPUT);
+pinMode(A0,INPUT);
+Serial.begin(9600);
+}
+
+void loop() {
+ val=analogRead(A0);
+// float newval= map(val,0,1023,0.00,5.00);
+ //analogWrite(ledpin, newval);
+ Serial.print("Voltage is = ");
+ Serial.println(val/204.6);
+ delay(1000);
+}
+=====================================================================================
+int ledpin=6;
+void setup() {
+pinMode(ledpin, OUTPUT);
+}
+
+void loop() {
+ for(int i=0 ; i<=255 ;i+=5){
+  analogWrite(ledpin, i);
+  delay(30);
+ }
+ for(int i=255 ; 0<=i ;i-=5){
+  analogWrite(ledpin, i);
+  delay(30);
+ }
+
+}

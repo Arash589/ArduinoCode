@@ -1,0 +1,33 @@
+
+#define key1 digitalRead(A0);
+void setup() {
+  pinMode(A0, INPUT);
+  pinMode(A1, INPUT);
+  pinMode(A2, INPUT);
+  pinMode(0, OUTPUT);
+  pinMode(1, OUTPUT);
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+}
+
+void loop() {
+  int i, a;
+  int dancinglight[4][4] = {
+    {0, 0, 0, 1},
+    {0, 0, 1, 0},
+    {0, 1, 0, 0},
+    {1, 0, 0, 0},
+  };
+  if (key = 1 == 0) {
+    for(a=0;a<=4;){}
+    for (i = 0; i <= 7; i++) {
+      digitalWrite(i, dancinglight[a][i]);
+      
+
+    }
+
+  }
+
+
+
+}
